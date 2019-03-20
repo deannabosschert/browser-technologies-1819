@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>ToDo App</title>
+    <link href="/styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopping List</h1>
+      <form action="/addtask" method="POST">
+
+        <h2>Added Tasks</h2>
+        <% for(let i = 0; i < task.length; i++){ %>
+        <li>
+          <input type="checkbox" name="check" value="<%= task[i] %>"/> <%= task[i] %>
+        </li>
+        <% } %>
+        <button formaction="/removetask" type="submit" id="top">Remove</button>
+        <input type="text" name="newtask" placeholder="add new task"/>
+        <button>Add Task</button>
+      </form>
+
+      <h2>Completed tasks</h2>
+      <% for(let i = 0; i < complete.length; i++){ %>
+      <li><input type="checkbox" checked /><%= complete[i] %></li>
+      <% } %>
+    </div>
+  </body>
+</html>
