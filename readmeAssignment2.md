@@ -30,6 +30,7 @@ Fallback on the default fonts; serif/serif
 
 #### Javascript turned off
 Write HTML semantically and make sure everything already works *before* getting to JavaScript
+- [x] Made everything server-side.
 
 #### Colorblindness (disable color)
 Test with Colorblindly, make sure the contrast is big enough and make use of patterns/hover aswell when using color as part of a legenda
@@ -53,3 +54,7 @@ Some of my features on top of the core functionalities will only work in specifi
 * Reliable
 * Reusable
 * Pleasurable
+
+
+### To Do:
+- [ ]

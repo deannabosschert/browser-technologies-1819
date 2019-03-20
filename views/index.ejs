@@ -10,9 +10,9 @@
 
         <h2>Added Tasks</h2>
         <% for(let i = 0; i < task.length; i++){ %>
-        <li>
+
           <input type="checkbox" name="check" value="<%= task[i] %>"/> <%= task[i] %>
-        </li>
+
         <% } %>
         <button formaction="/removetask" type="submit" id="top">Remove</button>
         <input type="text" name="newtask" placeholder="add new task"/>
@@ -21,7 +21,7 @@
 
       <h2>Completed tasks</h2>
       <% for(let i = 0; i < complete.length; i++){ %>
-      <li><input type="checkbox" checked /><%= complete[i] %></li>
+      <input type="checkbox" checked /><%= complete[i] %>
       <% } %>
     </div>
   </body>
