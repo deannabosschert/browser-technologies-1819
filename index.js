@@ -10,14 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }))
 .set('view engine', 'ejs')
 .use(express.static('public'))
 .post('/addtask', addTask)
-.post('/removetask', removeTaskToComplete)
+.post('/removetask', moveTaskToComplete)
 .get('/', shoppingList)
 .listen(3000, function(){
   console.log(`Example app listening on port ${port}!`)})
 
 
 function shoppingList(req, res) {
-    res.render('index', { task: task, complete: complete })
+    res.render('index', { task: task, complete: complete, listName: listName})
 }
 
 function addTask(req, res) {
@@ -26,7 +26,7 @@ function addTask(req, res) {
     res.redirect('/')
 }
 
-function removeTaskToComplete(req, res) {
+function moveTaskToComplete(req, res) {
     const completeTask = req.body.check
     //check for the 'typeof' the different completed task, then add into the complete task
     if (typeof completeTask === 'string') {

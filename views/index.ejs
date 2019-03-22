@@ -8,7 +8,7 @@
       <h1>Shopping List</h1>
       <form action="/addtask" method="POST">
 
-        <h2>Added Tasks</h2>
+        <h2><% listName %></h2>
         <% for(let i = 0; i < task.length; i++){ %>
 
           <input type="checkbox" name="check" value="<%= task[i] %>"/> <%= task[i] %>
