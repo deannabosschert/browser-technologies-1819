@@ -1,21 +1,14 @@
 <html>
   <head>
     <title>ToDo App</title>
-    <link href="/style.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet">
   </head>
   <body>
       <h1>Shopping List</h1>
-      <form action="/addtask" method="POST">
 
-        <!-- <h2><% listName %></h2> -->
-        <% for(let i = 0; i < task.length; i++){ %>
-          <input type="checkbox" name="check" value="<%= task[i] %>"/> <%= task[i]%> <%= category[i]%>
-          <button formaction="/removetask" type="submit" id="top">Remove</button>
-        <% } %>
-
-
-        <input type="text" name="newtask" placeholder="add new task"/>
-        <input list="category" name="category" placeholder="category">
+        <form action="/addtask" method="POST">
+        <input type="text" name="newtask" placeholder="add new task" required>
+        <input list="category" name="category" placeholder="category" required>
         <datalist id="category">
           <option value="Beverages">
           <option value="Bread/baker">
@@ -32,12 +25,21 @@
           <option value="Dairy">
           <option value="Other">
         </datalist>
-        <button>Add Task</button>
+        <button formaction="/addtask" type="submit" name="addtask">Add</button>
       </form>
 
-      <h2>Completed tasks</h2>
-      <% for(let i = 0; i < complete.length; i++){ %>
-      <input type="checkbox" /><%= complete[i] %> <%= category[i]%>
-      <% } %>
+      <!-- <form action="/completeTask" method="POST"> -->
+
+        <% for(let i = 0; i < task.length; i++){ %>
+          <% if (task[i].checked === true) { %>
+            <div><input type="checkbox" name="checked" value="" checked/> <%= task[i].name %> <%= task[i].category %><button data-id="<%= i %>">verplaats</button></div>
+          <% } else { %>
+            <div><input type="checkbox" name="check" value="" /> <%= task[i].name %> <%= task[i].category %><button data-id="<%= i %>">verplaats</button></div>
+          <% } %>
+          <!-- <button formaction="/completeTask" type="submit" name="completeTask" id="top">Remove</button> -->
+        <% } %>
+      <!-- </form> -->
+<!--
+
   </body>
 </html>
