@@ -80,3 +80,6 @@ Some of my features on top of the core functionalities will only work in specifi
 
 - add custom font, images per category, bootstrap
 - serve vanuit public
+
+Optioneel om een category toe te voegen
+Ook optioneel om bij een list toe te voegen; anders is de default bij 'General' oid

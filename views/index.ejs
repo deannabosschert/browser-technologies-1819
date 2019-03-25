@@ -1,28 +1,43 @@
 <html>
   <head>
     <title>ToDo App</title>
-    <link href="/styles.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
   </head>
   <body>
-    <div class="container">
       <h1>Shopping List</h1>
       <form action="/addtask" method="POST">
 
-        <h2><% listName %></h2>
+        <!-- <h2><% listName %></h2> -->
         <% for(let i = 0; i < task.length; i++){ %>
-
-          <input type="checkbox" name="check" value="<%= task[i] %>"/> <%= task[i] %>
-
+          <input type="checkbox" name="check" value="<%= task[i] %>"/> <%= task[i]%> <%= category[i]%>
+          <button formaction="/removetask" type="submit" id="top">Remove</button>
         <% } %>
-        <button formaction="/removetask" type="submit" id="top">Remove</button>
+
+
         <input type="text" name="newtask" placeholder="add new task"/>
+        <input list="category" name="category" placeholder="category">
+        <datalist id="category">
+          <option value="Beverages">
+          <option value="Bread/baker">
+          <option value="Canned/jarred goods">
+          <option value="Dairy">
+          <option value="Dry/baking goods">
+          <option value="Frozen">
+          <option value="Bread/baker">
+          <option value="Meat">
+          <option value="Produce">
+          <option value="Cleaners">
+          <option value="Paper goods">
+          <option value="Personal Care">
+          <option value="Dairy">
+          <option value="Other">
+        </datalist>
         <button>Add Task</button>
       </form>
 
       <h2>Completed tasks</h2>
       <% for(let i = 0; i < complete.length; i++){ %>
-      <input type="checkbox" checked /><%= complete[i] %>
+      <input type="checkbox" /><%= complete[i] %> <%= category[i]%>
       <% } %>
-    </div>
   </body>
 </html>
