@@ -28,7 +28,7 @@ function addTask(req, res) {
     task.push({
       name: newTask,
       category: newCategory,
-      checked: false
+      checked: true
     })
     // [['milk', 'diary'], ['lettuce', 'vegetables']]
     // [{task: 'milk', category: 'diary'}, {}]

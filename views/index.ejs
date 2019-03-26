@@ -4,8 +4,10 @@
     <link href="/style.css" rel="stylesheet">
   </head>
   <body>
+    <header>
       <h1>Shopping List</h1>
-
+    </header>
+    <main>
         <form action="/addtask" method="POST">
         <input type="text" name="newtask" placeholder="add new task" required>
         <input list="category" name="category" placeholder="category" required>
@@ -32,14 +34,13 @@
 
         <% for(let i = 0; i < task.length; i++){ %>
           <% if (task[i].checked === true) { %>
-            <div><input type="checkbox" name="checked" value="" checked/> <%= task[i].name %> <%= task[i].category %><button data-id="<%= i %>">verplaats</button></div>
+            <div><input type="checkbox" name="checked" value="" id="checked" checked/> <label for="checked"><%= task[i].name %> <%= task[i].category %></label> <button data-id="<%= i %>">verplaats</button></div>
           <% } else { %>
             <div><input type="checkbox" name="check" value="" /> <%= task[i].name %> <%= task[i].category %><button data-id="<%= i %>">verplaats</button></div>
           <% } %>
           <!-- <button formaction="/completeTask" type="submit" name="completeTask" id="top">Remove</button> -->
         <% } %>
       <!-- </form> -->
-<!--
-
+    </main>
   </body>
 </html>
