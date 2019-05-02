@@ -3,30 +3,30 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
-let tasks = ['']
-
+let saves = ['']
+let costs = ['']
 
 app.use(bodyParser.urlencoded({ extended: true }))
 .set('view engine', 'ejs')
 .use(express.static('public'))
-.post('/addtask', addTask)
-.post('/completeTask', completeTask)
-.get('/', shoppingList)
+.post('/addsave', addsave)
+.post('/completesave', completesave)
+// .post('/addcost', addcost)
+// .post('/completecost', completecost)
+.get('/', overview)
 .listen(3000, function(){
   console.log(`Example app listening on port ${port}!`)})
 
-function shoppingList(req, res) {
-    res.render('index', { tasks: tasks})
+function overview(req, res) {
+    res.render('index', { saves: saves})
 }
 
-function addTask(req, res) {
-    const newTask = req.body.newtask
-    // task.push(newTask)
+function addsave(req, res) {
+    const newsave = req.body.newsave
     const newCategory = req.body.category
-    // category.push(newCategory)
-    tasks.push({
+    saves.push({
       // id: req.dataset.id,
-      name: newTask,
+      name: newsave,
       category: newCategory,
       checked: false,
       completed: false
@@ -34,13 +34,13 @@ function addTask(req, res) {
     res.redirect('/')
 }
 
-function completeTask(req, res){
-    const dataId = tasks.dataid
+function completesave(req, res){
+    const dataId = saves.dataid
 
-tasks.forEach((task) => {
-    for (let dataId in tasks) {
-      if (tasks.dataId == dataId) {
-         tasks.completed = true
+saves.forEach((save) => {
+    for (let dataId in saves) {
+      if (saves.dataId == dataId) {
+         saves.completed = true
       }
       res.redirect('/')
     }

@@ -65,7 +65,7 @@ img {
 
 
 /* STATE */
-.taskChecked{
+.saveChecked{
 }
 input[type=checkbox] + label {
 
