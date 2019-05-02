@@ -3,14 +3,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
-let saves = ['']
+let saves = 0
 let costs = ['']
+let price = 1
 
 app.use(bodyParser.urlencoded({ extended: true }))
 .set('view engine', 'ejs')
 .use(express.static('public'))
 .post('/addsave', addsave)
-.post('/completesave', completesave)
 // .post('/addcost', addcost)
 // .post('/completecost', completecost)
 .get('/', overview)
@@ -22,27 +22,34 @@ function overview(req, res) {
 }
 
 function addsave(req, res) {
-    const newsave = req.body.newsave
-    const newCategory = req.body.category
-    saves.push({
-      // id: req.dataset.id,
-      name: newsave,
-      category: newCategory,
-      checked: false,
-      completed: false
-    })
+    saves++
     res.redirect('/')
 }
 
-function completesave(req, res){
-    const dataId = saves.dataid
+// const newTask = req.body.newtask
+// // task.push(newTask)
+// const newCategory = req.body.category
+// // category.push(newCategory)
+// tasks.push({
+//   // id: req.dataset.id,
+//   name: newTask,
+//   category: newCategory,
+//   checked: false,
+//   completed: false
+// })
+// res.redirect('/')
 
-saves.forEach((save) => {
-    for (let dataId in saves) {
-      if (saves.dataId == dataId) {
-         saves.completed = true
-      }
-      res.redirect('/')
-    }
-  })
-}
+
+
+// function completesave(req, res){
+//     const dataId = saves.dataid
+//
+// saves.forEach((save) => {
+//     for (let dataId in saves) {
+//       if (saves.dataId == dataId) {
+//          saves.completed = true
+//       }
+//       res.redirect('/')
+//     }
+//   })
+// }

@@ -9,46 +9,14 @@
     </header>
     <main>
         <form action="/addsave" method="POST">
-        <input type="text" name="newsave" placeholder="add new save" required>
-        <input list="category" name="category" placeholder="category" required>
-        <datalist id="category">
-          <option value="Beverages">
-          <option value="Bread/baker">
-          <option value="Canned/jarred goods">
-          <option value="Dairy">
-          <option value="Dry/baking goods">
-          <option value="Frozen">
-          <option value="Bread/baker">
-          <option value="Meat">
-          <option value="Produce">
-          <option value="Cleaners">
-          <option value="Paper goods">
-          <option value="Personal Care">
-          <option value="Other">
-        </datalist>
-        <button formaction="/addsave" type="submit" name="addsave">Add</button>
+        <button>Add savings</button>
       </form>
 
-      <form action="/completesave" method="POST">
-      <h2>Things to do</h2>
-        <% saves.forEach((save) => { %>
-          <% if (save.completed === false) { %>
-            <div><input type="checkbox" name="unchecked" data-id="<%= save %>"/> <label for="unchecked"><%= save.name %> <%= save.category %> <%= save.completed %> </label> <button formaction="/completesave">complete</button></div>
-          <% } else { %>
-          <% } %>
-          <!-- <button formaction="/completesave" type="submit" name="completesave" id="top">Remove</button> -->
-        <%   }) %>
-</form>
-    <h2>Completed saves</h2>
-    <% saves.forEach((save) => { %>
-      <% if (save.completed === true) { %>
-        <div><input type="checkbox" name="checked" value="" id="checked" checked/> <label for="checked"><%= save.name %> <%= save.category %></label> <button data-id="<%= save %>">delete</button></div>
-      <% } else { %>
-      <% } %>
-      <!-- <button formaction="/deletesave" type="submit" name="completesave" id="top">Remove</button> -->
-    <% }) %>
 
-      <!-- </form> -->
+      <h2>Cigarettes saved</h2>
+          <%= saves %>
+
+
     </main>
   </body>
 </html>
