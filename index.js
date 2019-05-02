@@ -4,25 +4,41 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 let saves = 0
-let costs = ['']
+let smokes = 0
 let price = 1
 
 app.use(bodyParser.urlencoded({ extended: true }))
 .set('view engine', 'ejs')
 .use(express.static('public'))
 .post('/addsave', addsave)
-// .post('/addcost', addcost)
-// .post('/completecost', completecost)
+.post('/removesave', removesave)
+.post('/addsmoke', addsmoke)
+.post('/removesmoke', removesmoke)
 .get('/', overview)
 .listen(3000, function(){
   console.log(`Example app listening on port ${port}!`)})
 
 function overview(req, res) {
-    res.render('index', { saves: saves})
+    res.render('index', { saves: saves, smokes: smokes})
 }
 
 function addsave(req, res) {
     saves++
+    res.redirect('/')
+}
+
+function removesave(req, res) {
+    saves--
+    res.redirect('/')
+}
+
+function addsmoke(req, res) {
+    smokes++
+    res.redirect('/')
+}
+
+function removesmoke(req, res) {
+    smokes--
     res.redirect('/')
 }
 

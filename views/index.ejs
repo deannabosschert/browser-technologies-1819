@@ -5,16 +5,37 @@
   </head>
   <body>
     <header>
-      <h1>Shopping List</h1>
+      <h1>Flick that stick</h1>
     </header>
     <main>
-        <form action="/addsave" method="POST">
+      <form action="/addsave" method="POST">
         <button>Add savings</button>
       </form>
+      <form action="/removesave" method="POST">
+        <button>Remove savings</button>
+      </form>
 
+      <form action="/addsmoke" method="POST">
+        <button>Add smokes</button>
+      </form>
+      <form action="/removesmoke" method="POST">
+        <button>Remove smokes</button>
+      </form>
 
       <h2>Cigarettes saved</h2>
           <%= saves %>
+
+        <%  for (i = 0; i < saves; i++) { %>
+          yeet
+        <%  } %>
+
+        <h2>Cigarettes smoked</h2>
+            <%= smokes %>
+
+          <%  for (i = 0; i < smokes; i++) { %>
+            yote
+          <%  } %>
+
 
 
     </main>
