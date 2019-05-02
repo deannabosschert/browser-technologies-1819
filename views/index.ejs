@@ -29,21 +29,20 @@
         <button formaction="/addtask" type="submit" name="addtask">Add</button>
       </form>
 
-      <!-- <form action="/completeTask" method="POST"> -->
+      <form action="/completeTask" method="POST">
       <h2>Things to do</h2>
         <% tasks.forEach((task) => { %>
           <% if (task.completed === false) { %>
-
-            <div><input type="checkbox" name="unchecked" data-id="<%= task %>"/> <label for="unchecked"><%= task.name %> <%= task.category %></label> <button formaction="/completeTask">verplaats</button></div>
+            <div><input type="checkbox" name="unchecked" data-id="<%= task %>"/> <label for="unchecked"><%= task.name %> <%= task.category %> <%= task.completed %> </label> <button formaction="/completeTask">complete</button></div>
           <% } else { %>
           <% } %>
           <!-- <button formaction="/completeTask" type="submit" name="completeTask" id="top">Remove</button> -->
         <%   }) %>
-
+</form>
     <h2>Completed tasks</h2>
     <% tasks.forEach((task) => { %>
       <% if (task.completed === true) { %>
-        <div><input type="checkbox" name="checked" value="" id="checked" checked/> <label for="checked"><%= task.name %> <%= task.category %></label> <button data-id="<%= task %>">verplaats</button></div>
+        <div><input type="checkbox" name="checked" value="" id="checked" checked/> <label for="checked"><%= task.name %> <%= task.category %></label> <button data-id="<%= task %>">delete</button></div>
       <% } else { %>
       <% } %>
       <!-- <button formaction="/deleteTask" type="submit" name="completeTask" id="top">Remove</button> -->

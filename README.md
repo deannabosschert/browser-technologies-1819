@@ -1,35 +1,85 @@
-# Browser Technologies @cmda-minor-web 1819
-//Robuuste, toegankelijke websites leren bouwen …
+# Shopping List
 
-In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.
+## The Design Challenge // Use Case
+* Ik wil boodschappen-om-tostis-te-maken in mijn boodschappenlijstje kunnen gooien.
 
-Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen ...
+* I want to add 'groceries-to-make-grilled-cheese' to my shopping list.
 
-## Leerdoelen
-- _Wat is Progressive enhancement en hoe kun je dit toepassen._
-- _Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund._
-- _Leren een Browser Technologies onderzoeken, testen en implementeren als enhancement._
+## Functionality
+By using this website, you can put your own Shopping List together and add pre-made lists (e.g. for making ommelettes, spaghetti, etc) to them, too. Whilst shopping, you can check those items off.
 
-[Rubric](https://docs.google.com/spreadsheets/d/1X8XBbblGAcoij4zPcbjZ5FHcQMusn1hc0NvNkzP5qx4/edit?usp=sharing)
+## Wireflow
 
-## Programma
+## Core functionalities
+* Add new lists
+* Add new groceries
+* View current shopping list
+* View lists to add
+* Edit current shopping list
+* Edit lists to add
+* Feedforward
 
-### Week 1
-Het web is voor iedereen. Leren over Progressive enhancement en kennismaken met testen en het device lab.
-- [Les 1 - Progressive enhancement & Briefing Opdracht 1.1](https://docs.google.com/presentation/d/1j2N22palCDin_0jX89DItLj9kQy8YhwwuvcA_XnhjWQ/edit?usp=sharing)
-- [Opdracht 1.1 - Breek het web](Opdracht1.1.md)
-- [Opdracht 1.2 - Fork je OBA](Opdracht1.2.md)
+## Features/Browser Technologies
+What I did to enhance inclusiveness:
 
-- Weekly Nerd: ICONS met Maike Klip - ontwerpen voor vluchtelingen. Woensdag 13 Maart, 16:00 in de Medialounge van het Theo Thijssenhuis.
+#### Images not available
+Use alt-text (even it's an unimportant image, then leave it empty "")
 
-### Week 2
-Wat laat je zien als een browser of gebruiker een 'enhancement' niet kan tonen of zien? Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund?
+#### Custom fonts turned off
+Fallback on the default fonts; serif/serif
 
-- Weekly Nerd: A11y met Ischa Gast - Schiphol.
+#### Javascript turned off
+Write HTML semantically and make sure everything already works *before* getting to JavaScript
+- [x] Made everything server-side.
+
+#### Colorblindness (disable color)
+Test with Colorblindly, make sure the contrast is big enough and make use of patterns/hover aswell when using color as part of a legenda
+
+#### Slow internet (turn off broadwidth)
+Test in console>network. Make sure the core functionalities load first.
+
+#### Cookies turned off
+
+#### localStorage disabled
+
+#### Mouse/trackpad does't work
+Write HTML semantically correct and test with screenreaders
+
+## Features supported by which browsers
+Some of my features on top of the core functionalities will only work in specific browsers. Below you'll find which one would work in which browser.
 
 
-### Week 3
-Verder werken aan de opdracht.
+### Four layers of Progressive Enhancement
+* Functional
+* Reliable
+* Reusable
+* Pleasurable
 
 
-- Weekly Nerd: PE bij de Voorhoede.
+## To Do:
+- [ ] Adjust
+- [ ] Add custom fonts
+- [ ] Add CSS
+- [ ] Implement images per category
+
+
+### Images per category
+
+- Beverages – coffee/tea, juice, soda
+- Bread/Bakery – sandwich loaves, dinner rolls, tortillas, bagels
+- Canned/Jarred Goods – vegetables, spaghetti sauce, ketchup
+- Dairy – cheeses, eggs, milk, yogurt, butter
+- Dry/Baking Goods – cereals, flour, sugar, pasta, mixes
+- Frozen Foods – waffles, vegetables, individual meals, ice cream
+- Meat – lunch meat, poultry, beef, pork
+- Produce – fruits, vegetables
+- Cleaners – all- purpose, laundry detergent, dishwashing liquid/detergent
+- Paper Goods – paper towels, toilet paper, aluminium foil, sandwich bags
+- Personal Care – shampoo, soap, hand soap, shaving cream
+- Other – baby items, pet items, batteries, greeting cards
+
+- add custom font, images per category, bootstrap
+- serve vanuit public
+
+Optioneel om een category toe te voegen
+Ook optioneel om bij een list toe te voegen; anders is de default bij 'General' oid
