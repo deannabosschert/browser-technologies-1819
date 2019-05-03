@@ -21,7 +21,8 @@ header{
 
 main {
   background-color: white;
-  max-width: 40vw;
+  min-width: 50vw;
+  max-width: 80vw;
   margin: 0vw 5vw 5vw 5vw;
   border-radius: 5px;
   box-shadow: 20px black;
@@ -58,8 +59,24 @@ img {
 
 }
 
+svg{
+
+}
 /* LAYOUT */
 
+.smallGreen{
+  max-width: 20%;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+.smallRed{
+  max-width: 20%;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
 
 /* MODULES */
 
