@@ -3,9 +3,15 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
+const http = require('http').Server(app);
 let saves = 0
 let smokes = 0
 let price = 1
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
+
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 .set('view engine', 'ejs')
