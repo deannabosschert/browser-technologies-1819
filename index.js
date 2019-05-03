@@ -2,6 +2,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+const http = require('http').Server(app)
 const port = 3000
 let saves = 0
 let smokes = 0
@@ -17,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 .post('/addsmoke', addsmoke)
 .post('/removesmoke', removesmoke)
 .get('/', overview)
-.listen(port, function(){
+http.listen(port, function(){
   console.log(`Example app listening on port ${port}!`)})
 
 
