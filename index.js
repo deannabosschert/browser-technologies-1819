@@ -3,7 +3,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
-const http = require('http').Server(app);
 let saves = 0
 let smokes = 0
 let price = 1
