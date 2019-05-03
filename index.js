@@ -6,11 +6,8 @@ const port = 3000
 let saves = 0
 let smokes = 0
 let price = 1
-http.listen(3000, function(){
-  console.log('listening on *:3000');
-});
-
-
+require('dotenv').config()
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }))
 .set('view engine', 'ejs')
@@ -20,8 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 .post('/addsmoke', addsmoke)
 .post('/removesmoke', removesmoke)
 .get('/', overview)
-.listen(3000, function(){
+.listen(port, function(){
   console.log(`Example app listening on port ${port}!`)})
+
 
 function overview(req, res) {
     res.render('index', { saves: saves, smokes: smokes})
