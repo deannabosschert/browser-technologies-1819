@@ -10,31 +10,33 @@
     <main>
 
 
-
-
+<div class="buttons">
+<div class="savings">
+  <form action="/removesave" method="POST">
+    <button>Remove savings</button>
+  </form>
       <form action="/addsave" method="POST">
         <button>Add savings</button>
       </form>
-      <form action="/removesave" method="POST">
-        <button>Remove savings</button>
-      </form>
-
+</div>
+<div class="smokes">
+  <form action="/removesmoke" method="POST">
+    <button>Remove smokes</button>
+  </form>
       <form action="/addsmoke" method="POST">
         <button>Add smokes</button>
       </form>
-      <form action="/removesmoke" method="POST">
-        <button>Remove smokes</button>
-      </form>
-
+</div>
+</div>
       <h2>Cigarettes saved</h2>
-          <%= saves %>
+      <h3>  <%= saves %> <h3>
 
         <%  for (i = 0; i < saves; i++) { %>
           <% include smallGreen.svg %>
         <%  } %>
 
         <h2>Cigarettes smoked</h2>
-            <%= smokes %>
+        <h3>  <%= smokes %> </h3>
 
           <%  for (i = 0; i < smokes; i++) { %>
             <% include smallRed.svg %>

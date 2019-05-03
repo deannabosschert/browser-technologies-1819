@@ -26,6 +26,7 @@ main {
   margin: 0vw 5vw 5vw 5vw;
   border-radius: 5px;
   box-shadow: 20px black;
+
 }
 
 section {
@@ -50,6 +51,7 @@ h2 {
 }
 
 h3 {
+  font-size: 3rem;
 }
 
 p {
@@ -62,7 +64,28 @@ img {
 svg{
 
 }
+
+button{
+  width: 15vw;
+  height: 15vw;
+  background: black;
+  color: white;
+  border-radius: 15px;
+  margin: 1vw;
+}
 /* LAYOUT */
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.savings{
+  display: inline-flex;
+}
+
+.smokes{
+  display: inline-flex;
+}
 
 .smallGreen{
   max-width: 20%;
