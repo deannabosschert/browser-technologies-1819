@@ -1,7 +1,7 @@
 {
-  "name": "shoppinglist",
+  "name": "brokesmoke",
   "version": "1.0.0",
-  "description": "to do list app",
+  "description": "app to keep track of smoking habits",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -13,6 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
