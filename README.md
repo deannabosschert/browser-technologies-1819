@@ -62,7 +62,6 @@ Some of my features on top of the core functionalities will only work in specifi
 - [ ] Add CSS
 - [ ] Implement images per category
 
-
 ### Images per category
 
 - Beverages – coffee/tea, juice, soda
