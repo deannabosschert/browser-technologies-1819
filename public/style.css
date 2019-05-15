@@ -13,6 +13,7 @@ body {
   background-color: #bad4ff;
   background-image: linear-gradient(#bad4ff, white);
   font-family: sans-serif;
+  display: flex;
 }
 
 header{
@@ -43,7 +44,7 @@ blockquote {
 }
 
 h1 {
-
+  display: block;
 }
 
 h2 {
@@ -81,24 +82,36 @@ button{
 
 .savings{
   display: inline-flex;
+  background-color: green;
 }
 
 .smokes{
   display: inline-flex;
+  background-color: red;
+}
+
+.scrounges{
+  display: inline-flex;
+  background-color: orange;
+}
+
+.cigarettesVisualized{
+  flex-wrap: wrap;
 }
 
 .smallGreen{
   max-width: 20%;
   margin: 0;
   padding: 0;
-  display: inline-flex;
+  z-index: 50;
 }
 
 .smallRed{
   max-width: 20%;
   margin: 0;
   padding: 0;
-  display: inline-flex;
+  z-index: 50;
+
 }
 
 /* MODULES */

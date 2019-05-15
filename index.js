@@ -5,6 +5,7 @@ const app = express()
 const http = require('http').Server(app)
 let saves = 0
 let smokes = 0
+let scrounges = 0
 let price = 1
 require('dotenv').config()
 const port = process.env.PORT || 3000
@@ -16,13 +17,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 .post('/removesave', removesave)
 .post('/addsmoke', addsmoke)
 .post('/removesmoke', removesmoke)
+.post('/addscrounge', addscrounge)
+.post('/removescrounge', removescrounge)
 .get('/', overview)
 http.listen(port, function(){
   console.log(`Example app listening on port ${port}!`)})
 
 
 function overview(req, res) {
-    res.render('index', { saves: saves, smokes: smokes})
+    res.render('index', { saves: saves, smokes: smokes, scrounges: scrounges})
 }
 
 function addsave(req, res) {
@@ -45,6 +48,15 @@ function removesmoke(req, res) {
     res.redirect('/')
 }
 
+function addscrounge(req, res) {
+    scrounges++
+    res.redirect('/')
+}
+
+function removescrounge(req, res) {
+    scrounges--
+    res.redirect('/')
+}
 // const newTask = req.body.newtask
 // // task.push(newTask)
 // const newCategory = req.body.category
