@@ -21,8 +21,6 @@ body {
 
 header{
   /* margin: 3vw 0vw 0vw 5vw; */
-  margin-left: 5vw;
-  
 }
 
 main {
@@ -56,6 +54,7 @@ h1 {
 h2 {
   font-size: 1.9rem;
   margin: 1vw;
+  color: white;
 }
 
 h3 {
@@ -91,17 +90,17 @@ button{
 
 .savings{
   display: inline-flex;
-  background-color: green;
+  background-color: rgb(34, 109, 49);
 }
 
 .smokes{
   display: inline-flex;
-  background-color: red;
+  background-color: rgb(109, 35, 35);
 }
 
 .scrounges{
   display: inline-flex;
-  background-color: orange;
+  background-color: rgb(109, 52, 33);
 }
 
 .cigarettesVisualized{
