@@ -6,7 +6,10 @@ const http = require('http').Server(app)
 let saves = 0
 let smokes = 0
 let scrounges = 0
-let price = 0.35
+let pricePerCigarette = 0.35
+
+
+
 require('dotenv').config()
 const port = process.env.PORT || 3000
 
@@ -25,7 +28,10 @@ http.listen(port, function(){
 
 
 function overview(req, res) {
+
+
     res.render('index', { saves: saves, smokes: smokes, scrounges: scrounges})
+
 }
 
 function addsave(req, res) {
