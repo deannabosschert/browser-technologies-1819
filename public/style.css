@@ -14,7 +14,7 @@ body {
   background-image: linear-gradient(#bad4ff, white);
   font-family: sans-serif;
   display: flex;
-  max-width: 75vw;
+  /* max-width: 75vw; */
   align-content: center;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
@@ -53,8 +53,9 @@ h1 {
 
 h2 {
   font-size: 1.9rem;
-  margin: 1vw;
+  padding: 1vw;
   color: white;
+  background: black;
 }
 
 h3 {
@@ -74,33 +75,61 @@ svg{
 }
 
 button{
-  width: 15vw;
-  height: 15vw;
-  background: black;
-  color: white;
-  border-radius: 15px;
+  display: inline-flex;
+  width: 7vw;
+  height: 3vw;
+  border-radius: 5px;
   margin: 1vw;
+  font-variant: small-caps;
+  font-weight: bold;
+text-align: center;
+align-self: center;
+justify-content: center;
 }
 /* LAYOUT */
 
-.buttons{
+.categories{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
+
+.buttons{
+  display: inline-flex;
+  font-variant: small-caps;
+  text-align: center;
+  align-self: center;
+
+}
+
 
 .savings{
   display: inline-flex;
   background-color: rgb(34, 109, 49);
+  flex-direction: column;
+  margin: 1.5vw;
 }
 
 .smokes{
   display: inline-flex;
   background-color: rgb(109, 35, 35);
+  margin: 1.5vw;
+  flex-direction: column;
+
 }
 
 .scrounges{
   display: inline-flex;
   background-color: rgb(109, 52, 33);
+  margin: 1.5vw;
+  flex-direction: column;
+
+
+}
+
+.remove{
+  /* position: absolute;
+  max-width: 5vw;
+  max-height: 5vh; */
 }
 
 .cigarettesVisualized{
@@ -123,11 +152,7 @@ button{
 }
 
 /* MODULES */
-.remove{
-  position: absolute;
-  max-width: 5vw;
-  max-height: 5vh;
-}
+
 
 /* STATE */
 .saveChecked{
