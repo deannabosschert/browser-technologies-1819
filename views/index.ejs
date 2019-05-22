@@ -7,7 +7,7 @@
     <header>
       <h1>BrokeSmoke</h1>
     </header>
-    <main>
+<main>
 
 <section>
 <p> Smoked less: <%= saves %> </p>
@@ -19,13 +19,13 @@
 <div class="savings">
 
   <form action="/removesave" method="POST">
-    <button>Remove savings</button>
+    <button class="remove">Remove savings</button>
   </form>
       <form action="/addsave" method="POST">
         <button>Add savings</button>
       </form>
+      <h2>  <%= saves %> <h2>
       <h2>Cigarettes saved</h2>
-      <h3>  <%= saves %> <h3>
 
 
 </div>
@@ -34,13 +34,14 @@
 
 <div class="smokes">
   <form action="/removesmoke" method="POST">
-    <button>Remove smokes</button>
+    <button class="remove">Remove smokes</button>
   </form>
       <form action="/addsmoke" method="POST">
         <button>Add smokes</button>
       </form>
+
+      <h2>  <%= smokes %> </h2>
       <h2>Cigarettes smoked</h2>
-      <h3>  <%= smokes %> </h3>
 
 
 </div>
@@ -49,14 +50,14 @@
 
 <div class="scrounges">
   <form action="/removescrounge" method="POST">
-    <button>Remove scrounge</button>
+    <button class="remove">Remove scrounge</button>
   </form>
       <form action="/addscrounge" method="POST">
         <button>Add scrounge</button>
       </form>
-
+                <h2>  <%= scrounges %> </h2>
                 <h2>Cigarettes scrounged</h2>
-                <h3>  <%= scrounges %> </h3>
+
 
 
 </div>

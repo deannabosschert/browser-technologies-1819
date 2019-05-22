@@ -1,26 +1,31 @@
-# Shopping List
+# BrokeSmoke
 
 ## The Design Challenge // Use Case
-* Ik wil boodschappen-om-tostis-te-maken in mijn boodschappenlijstje kunnen gooien.
+* Ik wil bij kunnen houden hoeveel sigaretten ik (vanaf het moment van minderen met roken) bespaar, wel rook, laat bietsen en wat de financiële gevolgen hiervan zijn.
 
-* I want to add 'groceries-to-make-grilled-cheese' to my shopping list.
+* I want to track my smoking habits from the moment of quitting and what the financial outcome of this is.
 
 ## Functionality
-By using this website, you can put your own Shopping List together and add pre-made lists (e.g. for making ommelettes, spaghetti, etc) to them, too. Whilst shopping, you can check those items off.
+By using this website, you can track how many cigarettes you chose not to smoke, you chose to smoke and how many you gave away to others. You'll also be able to see how much money you saved or spent from the moment you smoked less.
+
 
 ## Wireflow
 
 ## Core functionalities
-* Add new lists
-* Add new groceries
-* View current shopping list
-* View lists to add
-* Edit current shopping list
-* Edit lists to add
+* Add a cigarette you haven't smoked
+* Add a cigarette you did smoke
+* Add a cigarette you gave away
+* Correct (decrease) a cigarette you haven't smoked
+* Correct (decrease) cigarette you did smoke
+* Correct (decrease) a cigarette you gave away
+* Track how much money you saved by choosing not to smoke
+* Track how much money you spent by choosing to smoke
+* Track how much money you spent by letting others scrounge
 * Feedforward
 
 ## Features/Browser Technologies
 What I did to enhance inclusiveness:
+
 
 #### Images not available
 Use alt-text (even it's an unimportant image, then leave it empty "")
@@ -62,23 +67,8 @@ Some of my features on top of the core functionalities will only work in specifi
 - [ ] Add CSS
 - [ ] Implement images per category
 
-### Images per category
+### Images
 
-- Beverages – coffee/tea, juice, soda
-- Bread/Bakery – sandwich loaves, dinner rolls, tortillas, bagels
-- Canned/Jarred Goods – vegetables, spaghetti sauce, ketchup
-- Dairy – cheeses, eggs, milk, yogurt, butter
-- Dry/Baking Goods – cereals, flour, sugar, pasta, mixes
-- Frozen Foods – waffles, vegetables, individual meals, ice cream
-- Meat – lunch meat, poultry, beef, pork
-- Produce – fruits, vegetables
-- Cleaners – all- purpose, laundry detergent, dishwashing liquid/detergent
-- Paper Goods – paper towels, toilet paper, aluminium foil, sandwich bags
-- Personal Care – shampoo, soap, hand soap, shaving cream
-- Other – baby items, pet items, batteries, greeting cards
-
-- add custom font, images per category, bootstrap
-- serve vanuit public
 
 Optioneel om een category toe te voegen
 Ook optioneel om bij een list toe te voegen; anders is de default bij 'General' oid

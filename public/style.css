@@ -14,19 +14,26 @@ body {
   background-image: linear-gradient(#bad4ff, white);
   font-family: sans-serif;
   display: flex;
+  max-width: 75vw;
+  align-content: center;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 header{
-  margin: 3vw 0vw 0vw 5vw;
+  /* margin: 3vw 0vw 0vw 5vw; */
+  margin-left: 5vw;
+  
 }
 
 main {
   background-color: white;
-  min-width: 50vw;
-  max-width: 80vw;
+  /* min-width: 50vw;
+  max-width: 80vw; */
   margin: 0vw 5vw 5vw 5vw;
   border-radius: 5px;
   box-shadow: 20px black;
+  align-self: center;
+  flex-direction: column;
 
 }
 
@@ -44,18 +51,19 @@ blockquote {
 }
 
 h1 {
-  display: block;
 }
 
 h2 {
-
+  font-size: 1.9rem;
+  margin: 1vw;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 1.4rem;
 }
 
 p {
+  font-size: 1.4rem;
 }
 
 img {
@@ -75,6 +83,7 @@ button{
   margin: 1vw;
 }
 /* LAYOUT */
+
 .buttons{
   display: flex;
   flex-direction: column;
@@ -115,7 +124,11 @@ button{
 }
 
 /* MODULES */
-
+.remove{
+  position: absolute;
+  max-width: 5vw;
+  max-height: 5vh;
+}
 
 /* STATE */
 .saveChecked{
