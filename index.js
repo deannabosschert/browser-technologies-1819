@@ -6,7 +6,7 @@ const http = require('http').Server(app)
 let saves = 0
 let smokes = 0
 let scrounges = 0
-let price = 1
+let price = 0.35
 require('dotenv').config()
 const port = process.env.PORT || 3000
 

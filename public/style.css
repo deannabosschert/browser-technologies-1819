@@ -25,13 +25,12 @@ header{
 
 main {
   background-color: white;
-  /* min-width: 50vw;
-  max-width: 80vw; */
+  /* max-width: 80vw; */
   margin: 0vw 5vw 5vw 5vw;
   border-radius: 5px;
   box-shadow: 20px black;
-  align-self: center;
-  flex-direction: column;
+  /* align-self: center; */
+  padding: 2vw;
 
 }
 
@@ -76,15 +75,16 @@ svg{
 
 button{
   display: inline-flex;
-  width: 7vw;
-  height: 3vw;
+  max-width: 10vw;
+  max-height: 7vh;
   border-radius: 5px;
   margin: 1vw;
   font-variant: small-caps;
   font-weight: bold;
-text-align: center;
-align-self: center;
-justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1.5vw;
+
 }
 /* LAYOUT */
 
@@ -98,11 +98,14 @@ justify-content: center;
   font-variant: small-caps;
   text-align: center;
   align-self: center;
+  align-items: center;
+  justify-content: center;
 
 }
 
 
 .savings{
+  max-width: 30vw;
   display: inline-flex;
   background-color: rgb(34, 109, 49);
   flex-direction: column;
@@ -110,6 +113,7 @@ justify-content: center;
 }
 
 .smokes{
+  max-width: 30vw;
   display: inline-flex;
   background-color: rgb(109, 35, 35);
   margin: 1.5vw;
@@ -118,6 +122,8 @@ justify-content: center;
 }
 
 .scrounges{
+  max-width: 30vw;
+
   display: inline-flex;
   background-color: rgb(109, 52, 33);
   margin: 1.5vw;

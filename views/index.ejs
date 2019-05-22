@@ -4,8 +4,6 @@
     <link href="/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-    </header>
 <main>
 <section>
   <h1>BrokeSmoke</h1>
@@ -20,6 +18,7 @@
 
 <div class="savings">
   <h2>  <%= saves %> Cigarettes saved</h2>
+
   <section class="buttons">
   <form action="/removesave" method="POST">
     <button class="remove">remove savings</button>
@@ -67,6 +66,8 @@
 
 
 </div>
+
+
 <section class="cigarettesVisualized">
         <%  for (i = 0; i < saves; i++) { %>
           <% include smallGreen.svg %>
@@ -75,12 +76,11 @@
   <% include smallRed.svg %>
 
 <%  } %>
-<%  for (i = 0; i < smokes; i++) { %>
+<%  for (i = 0; i < scrounges; i++) { %>
   <% include smallRed.svg %>
 <%  } %>
+
 </section>
-
-
     </main>
   </body>
 </html>
