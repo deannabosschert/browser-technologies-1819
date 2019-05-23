@@ -55,8 +55,7 @@ h2 {
   padding: 1vw;
   padding-bottom: 2.5vw;
   color: white;
-  background: black;
-  margin-top: -1vw;
+  margin-top: -1.5vw;
   position: relative;
   z-index: 4;
 }
@@ -65,7 +64,9 @@ h2 {
 h3 {
   font-size: 1.9rem;
   padding: 1vw;
-  color: white;}
+  color: black;
+  text-align: center;
+}
 
 p {
   font-size: 1.4rem;
@@ -84,13 +85,15 @@ button{
   max-width: 10vw;
   max-height: 7vh;
   border-radius: 5px;
+  border: 4px solid black;
   margin: 1vw;
   font-variant: small-caps;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
+  justify-content: center;
   align-items: center;
   padding: 1.5vw;
-
+  background-color: rgba(153,153,153,0.3);
 }
 /* LAYOUT */
 
@@ -106,7 +109,7 @@ button{
   align-self: center;
   align-items: center;
   justify-content: center;
-  border: 4px solid black;
+  border: 6px solid black;
   margin: 0.5vw;
 }
 
@@ -114,26 +117,47 @@ button{
 .savings{
   max-width: 30vw;
   display: inline-flex;
-  background-color: rgb(34, 109, 49);
-  flex-direction: column;
+  background-color: rgb(249, 249, 249);
   margin: 1.5vw;
+  padding-top: 1vw;
+  flex-direction: column;
+  box-shadow: 7px 6px 6px 1px rgba(153,153,153,1);
+
 }
+ .savings h2{
+   background-color: rgb(34, 109, 49);
+ }
 
 .smokes{
   max-width: 30vw;
   display: inline-flex;
-  background-color: rgb(109, 35, 35);
+  background-color: rgb(249, 249, 249);
   margin: 1.5vw;
+  padding-top: 1vw;
   flex-direction: column;
+  box-shadow: 7px 6px 6px 1px rgba(153,153,153,1);
+
+}
+
+.smokes h2{
+  background-color: rgb(109, 35, 35);
 
 }
 
 .scrounges{
   max-width: 30vw;
   display: inline-flex;
-  background-color: rgb(109, 52, 33);
+  background-color: rgb(249, 249, 249);
   margin: 1.5vw;
+  padding-top: 1vw;
   flex-direction: column;
+  box-shadow: 7px 6px 6px 1px rgba(153,153,153,1);
+
+}
+
+.scrounges h2{
+  background-color: rgb(109, 52, 33);
+
 }
 
 .money{
@@ -149,6 +173,7 @@ button{
 }
 
 .right{
+  text-align: left;
 
 }
 
@@ -162,19 +187,45 @@ button{
   flex-wrap: wrap;
 }
 
-.smallGreen{
-  max-width: 20%;
+.green{
+  margin: 0;
+  padding: 0;
+}
+
+.orange{
+  margin: 0;
+  padding: 0;
+}
+
+.red{
+  margin: 0;
+  padding: 0;
+}
+
+.savedimg{
+  padding: 1vw;
+
+}
+
+.smallSaved{
+  max-height: 5vh;
   margin: 0;
   padding: 0;
   z-index: 50;
 }
 
-.smallRed{
-  max-width: 20%;
+.smallSmoked{
+  max-height: 5vh;
   margin: 0;
   padding: 0;
   z-index: 50;
+}
 
+.smallScrounged{
+  max-height: 5vh;
+  margin: 0;
+  padding: 0;
+  z-index: 50;
 }
 
 /* MODULES */

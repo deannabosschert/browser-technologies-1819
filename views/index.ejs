@@ -24,9 +24,12 @@
 
 <div class="categories">
 
-<div class="savings">
+<section class="savings">
   <h2>  <%= saves %> Cigarettes saved</h2>
   <h3>€ <%= (saves * 0.35).toFixed(2) %> </h3>
+  <div class="savedimg ">
+    <% include smallSaved.svg %>
+  </div>
   <section class="buttons">
   <form action="/removesave" method="POST">
     <button class="remove">remove savings</button>
@@ -35,16 +38,16 @@
     <button>add savings</button>
   </form>
 </section>
+</section>
 
 
 
-</div>
-
-
-
-<div class="smokes">
+<section class="smokes">
   <h2>  <%= smokes %> Cigarettes smoked</h2>
   <h3>€ <%= (smokes * 0.35).toFixed(2) %> </h3>
+  <div class="savedimg ">
+    <% include smallSmoked.svg %>
+  </div>
   <section class="buttons">
   <form action="/removesmoke" method="POST">
     <button class="remove">remove smokes</button>
@@ -53,15 +56,16 @@
         <button>add smokes</button>
       </form>
 </section>
-
-
-</div>
+</section>
 
 
 
-<div class="scrounges">
+<section class="scrounges">
   <h2>  <%= scrounges %> Cigarettes scrounged </h2>
   <h3>€ <%= (scrounges * 0.35).toFixed(2) %> </h3>
+  <div class="savedimg ">
+    <% include smallScrounged.svg %>
+  </div>
   <section class="buttons">
   <form action="/removescrounge" method="POST">
     <button class="remove">remove scrounge</button>
@@ -70,25 +74,31 @@
         <button>add scrounge</button>
       </form>
 </section>
-
-
-</div>
+</section>
 
 
 </div>
 
 
 <section class="cigarettesVisualized">
+<section class="green">
         <%  for (i = 0; i < saves; i++) { %>
-          <% include smallGreen.svg %>
+          <% include smallSaved.svg %>
         <%  } %>
-<%  for (i = 0; i < smokes; i++) { %>
-  <% include smallRed.svg %>
+</section>
+<section class="orange">
 
+<%  for (i = 0; i < smokes; i++) { %>
+  <% include smallSmoked.svg %>
 <%  } %>
+</section>
+
+<section class="orange">
+
 <%  for (i = 0; i < scrounges; i++) { %>
-  <% include smallRed.svg %>
+  <% include smallScrounged.svg %>
 <%  } %>
+</section>
 
 </section>
     </main>
