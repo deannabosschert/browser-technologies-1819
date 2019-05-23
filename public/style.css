@@ -55,6 +55,8 @@ h1 {
   font-size: 4rem;
   text-align: center;
   margin-top: -1vw;
+  text-shadow: 0px 0px 3px rgba(200, 200, 200, 0.6);
+  transition: 1s;
 }
 
 h2 {
@@ -182,7 +184,7 @@ button{
   /* align-self: center; */
   min-width: 30vw;
   max-width: 50vw;
-  margin-left: 22vw;
+  margin-left: 25vw;
   /* margin-right: 4vw; */
 }
 
@@ -208,6 +210,14 @@ button{
   flex-direction: column;
 }
 
+.screenreader {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 
 .savedimg {
@@ -253,6 +263,15 @@ input[type=checkbox]:checked + label {
   text-decoration: line-through;
 }
 
+
+
+h1:hover{
+color: transparent;
+text-shadow: 0px -200px 200px transparent;
+transform: scaleY(2)translate(-50%, -150%)scaleX(0);
+transition: transform 10s, text-shadow 10s, color 0.2s;
+}
+
 h2:before {
   content: '';
   position: absolute;
@@ -278,8 +297,6 @@ h2:after {
   transform: skew(0deg, 5deg);
   z-index: -1;
 }
-
-
 
 
 /* THEME */

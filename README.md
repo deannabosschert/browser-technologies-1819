@@ -10,6 +10,10 @@ By using this website, you can track how many cigarettes you chose not to smoke,
 
 
 ## Wireflow
+![screenshot of first half](https://paper-attachments.dropbox.com/s_10BA620165FE32DB3EE837212670E796E3D7D1FB3A7C3434F8B67BE0AF78582E_1558584808452_Screenshot+2019-05-23+at+06.12.49.png)
+
+![screenshot of second half](https://paper-attachments.dropbox.com/s_10BA620165FE32DB3EE837212670E796E3D7D1FB3A7C3434F8B67BE0AF78582E_1558584818134_Screenshot+2019-05-23+at+06.13.10.png)
+
 
 ## Core functionalities
 * Add a cigarette you haven't smoked
@@ -21,11 +25,10 @@ By using this website, you can track how many cigarettes you chose not to smoke,
 * Track how much money you saved by choosing not to smoke
 * Track how much money you spent by choosing to smoke
 * Track how much money you spent by letting others scrounge
-* Feedforward
 
 ## Features/Browser Technologies
 What I did to enhance inclusiveness:
-
+Tested with JAWS on Windows, added paragraphs with extra explanation for visually impaired users.
 
 #### Images not available
 Use alt-text (even it's an unimportant image, then leave it empty "")
@@ -38,37 +41,41 @@ Write HTML semantically and make sure everything already works *before* getting 
 - [x] Made everything server-side.
 
 #### Colorblindness (disable color)
-Test with Colorblindly, make sure the contrast is big enough and make use of patterns/hover aswell when using color as part of a legenda
+Test with Colorblindly, make sure the contrast is big enough and make use of the size of the used illustrations aswell when using color as part of a legenda
 
 #### Slow internet (turn off broadwidth)
-Test in console>network. Make sure the core functionalities load first.
+Test in console>network. Made sure the core functionalities load first.
 
 #### Cookies turned off
+Still works fine.
 
 #### localStorage disabled
+Still works fine.
 
 #### Mouse/trackpad does't work
-Write HTML semantically correct and test with screenreaders
+Write HTML semantically correct and tested with a screenreader.
 
 ## Features supported by which browsers
-Some of my features on top of the core functionalities will only work in specific browsers. Below you'll find which one would work in which browser.
+Some of my features on top of the core functionalities will only work in specific browsers.
+Basically, the only 'tricky' one was the usage of Flexbox:
+
+![caniuse about flexbox](https://paper-attachments.dropbox.com/s_10BA620165FE32DB3EE837212670E796E3D7D1FB3A7C3434F8B67BE0AF78582E_1558594870779_Screenshot+2019-05-23+at+09.01.02.png)
 
 
 ### Four layers of Progressive Enhancement
 * Functional
+The html works and it's possible to add a smoke
+
 * Reliable
+It all still works whenever JavaScript is turned off
+
 * Reusable
+It's easy to use on-the-go
+
 * Pleasurable
+A bit of extra css-animations added to make it more fun
 
 
 ## To Do:
-- [ ] Adjust
-- [ ] Add custom fonts
-- [ ] Add CSS
-- [ ] Implement images per category
-
-### Images
-
-
-Optioneel om een category toe te voegen
-Ook optioneel om bij een list toe te voegen; anders is de default bij 'General' oid
+- [ ] Flexbox; center not working properly
+- [ ] Adding a 'nice to have'-JavaScriptfeature.
