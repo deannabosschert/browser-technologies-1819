@@ -15,9 +15,9 @@
     <p> Scrounged off:  <%= scrounges %> </p>
   </section>
   <section class="right">
-    <p class="balance">Balance: € <%= (saves * 0.35)+(smokes * -0.35)+(scrounges * -0.35) %>  </p>
-    <p> Total spent: € <%= (smokes * 0.35)+(scrounges * 0.35) %> </p>
-    <p> Total saved: €  <%= (saves * 0.35) %> </p>
+    <p class="balance">Balance: € <%= ((saves * 0.35)+(smokes * -0.35)+(scrounges * -0.35)).toFixed(2) %>  </p>
+    <p> Total spent: € <%= ((smokes * 0.35)+(scrounges * 0.35)).toFixed(2) %> </p>
+    <p> Total saved: €  <%= (saves * 0.35).toFixed(2) %> </p>
   </section>
 </section>
 <section>
@@ -26,7 +26,7 @@
 
 <div class="savings">
   <h2>  <%= saves %> Cigarettes saved</h2>
-  <h3>€ <%= (saves * 0.35) %> </h3>
+  <h3>€ <%= (saves * 0.35).toFixed(2) %> </h3>
   <section class="buttons">
   <form action="/removesave" method="POST">
     <button class="remove">remove savings</button>
@@ -44,7 +44,7 @@
 
 <div class="smokes">
   <h2>  <%= smokes %> Cigarettes smoked</h2>
-  <h3>€ <%= (smokes * 0.35) %> </h3>
+  <h3>€ <%= (smokes * 0.35).toFixed(2) %> </h3>
   <section class="buttons">
   <form action="/removesmoke" method="POST">
     <button class="remove">remove smokes</button>
@@ -61,7 +61,7 @@
 
 <div class="scrounges">
   <h2>  <%= scrounges %> Cigarettes scrounged </h2>
-  <h3>€ <%= (scrounges * 0.35) %> </h3>
+  <h3>€ <%= (scrounges * 0.35).toFixed(2) %> </h3>
   <section class="buttons">
   <form action="/removescrounge" method="POST">
     <button class="remove">remove scrounge</button>
