@@ -7,7 +7,10 @@
 <main>
 <section>
   <h1>BrokeSmoke</h1>
+  <h3 class="ondertitel">Keep track of your smoking habits</h3>
 </section>
+
+
 <section class="money">
   <section class="left">
     <p> Smoked less:  <%= saves %> </p>
@@ -20,86 +23,77 @@
     <p> Total saved: €  <%= (saves * 0.35).toFixed(2) %> </p>
   </section>
 </section>
-<section>
 
 <div class="categories">
 
-<section class="savings">
-  <h2>  <%= saves %> Cigarettes saved</h2>
-  <h3>€ <%= (saves * 0.35).toFixed(2) %> </h3>
-  <div class="savedimg ">
-    <% include smallSaved.svg %>
-  </div>
-  <section class="buttons">
-  <form action="/removesave" method="POST">
-    <button class="remove">remove savings</button>
-  </form>
-  <form action="/addsave" method="POST">
-    <button>add savings</button>
-  </form>
-</section>
-</section>
+  <section class="savings">
+    <h2>  <%= saves %> Cigarettes saved</h2>
+    <h3>€ <%= (saves * 0.35).toFixed(2) %> </h3>
+    <div class="savedimg ">
+      <% include smallSaved.svg %>
+    </div>
+    <section class="buttons">
+    <form action="/removesave" method="POST">
+      <button class="remove">remove savings</button>
+    </form>
+    <form action="/addsave" method="POST">
+      <button>add savings</button>
+    </form>
+  </section>
+  </section>
 
 
 
-<section class="smokes">
-  <h2>  <%= smokes %> Cigarettes smoked</h2>
-  <h3>€ <%= (smokes * 0.35).toFixed(2) %> </h3>
-  <div class="savedimg ">
-    <% include smallSmoked.svg %>
-  </div>
-  <section class="buttons">
-  <form action="/removesmoke" method="POST">
-    <button class="remove">remove smokes</button>
-  </form>
+  <section class="smokes">
+    <h2>  <%= smokes %> Cigarettes smoked</h2>
+    <h3>€ <%= (smokes * 0.35).toFixed(2) %> </h3>
+    <div class="savedimg ">
+      <% include smallSmoked.svg %>
+    </div>
+    <section class="buttons">
+      <form action="/removesmoke" method="POST">
+        <button class="remove">remove smokes</button>
+      </form>
       <form action="/addsmoke" method="POST">
         <button>add smokes</button>
       </form>
-</section>
-</section>
+    </section>
+  </section>
 
 
 
-<section class="scrounges">
-  <h2>  <%= scrounges %> Cigarettes scrounged </h2>
-  <h3>€ <%= (scrounges * 0.35).toFixed(2) %> </h3>
-  <div class="savedimg ">
-    <% include smallScrounged.svg %>
-  </div>
-  <section class="buttons">
-  <form action="/removescrounge" method="POST">
-    <button class="remove">remove scrounge</button>
-  </form>
-      <form action="/addscrounge" method="POST">
-        <button>add scrounge</button>
-      </form>
-</section>
-</section>
-
-
+  <section class="scrounges">
+    <h2>  <%= scrounges %> Cigarettes scrounged </h2>
+    <h3>€ <%= (scrounges * 0.35).toFixed(2) %> </h3>
+    <div class="savedimg ">
+      <% include smallScrounged.svg %>
+    </div>
+    <section class="buttons">
+    <form action="/removescrounge" method="POST">
+      <button class="remove">remove scrounge</button>
+    </form>
+        <form action="/addscrounge" method="POST">
+          <button>add scrounge</button>
+        </form>
+  </section>
+  </section>
 </div>
 
-
+<h3>The Big Ol' Stack of Cigarettes</h3>
+<p> You know, in case you wanna scroll through your total smoking progress.</p>
 <section class="cigarettesVisualized">
-<section class="green">
-        <%  for (i = 0; i < saves; i++) { %>
-          <% include smallSaved.svg %>
-        <%  } %>
-</section>
-<section class="orange">
 
-<%  for (i = 0; i < smokes; i++) { %>
-  <% include smallSmoked.svg %>
-<%  } %>
-</section>
+          <%  for (i = 0; i < saves; i++) { %>
+            <% include smallSaved.svg %>
+          <%  } %>
 
-<section class="orange">
+  <%  for (i = 0; i < smokes; i++) { %>
+    <% include smallSmoked.svg %>
+  <%  } %>
 
-<%  for (i = 0; i < scrounges; i++) { %>
-  <% include smallScrounged.svg %>
-<%  } %>
-</section>
-
+  <%  for (i = 0; i < scrounges; i++) { %>
+    <% include smallScrounged.svg %>
+  <%  } %>
 </section>
     </main>
   </body>

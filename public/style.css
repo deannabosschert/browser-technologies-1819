@@ -17,6 +17,7 @@ body {
   /* max-width: 75vw; */
   align-content: center;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  align-content: center;
 }
 
 header{
@@ -24,14 +25,15 @@ header{
 }
 
 main {
-  background-color: white;
+  background-color: rgb(249, 249, 249, 0.7);
   /* max-width: 80vw; */
-  margin: 0vw 5vw 5vw 5vw;
+  margin: 2vw 5vw 5vw 5vw;
   border-radius: 5px;
   box-shadow: 20px black;
   /* align-self: center; */
   padding: 2vw;
-
+  box-shadow: 7px 6px 6px 1px rgba(153,153,153,1);
+  border-radius: 10px;
 }
 
 section {
@@ -48,6 +50,11 @@ blockquote {
 }
 
 h1 {
+  margin-left: 1.5vw;
+  font-variant: small-caps;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: -1vw;
 }
 
 h2 {
@@ -58,6 +65,7 @@ h2 {
   margin-top: -1.5vw;
   position: relative;
   z-index: 4;
+  text-align: center;
 }
 
 
@@ -70,6 +78,7 @@ h3 {
 
 p {
   font-size: 1.4rem;
+  text-align: center;
 }
 
 img {
@@ -96,8 +105,12 @@ button{
   background-color: rgba(153,153,153,0.3);
 }
 /* LAYOUT */
+.ondertitel{
+  margin-top: -1vw;
+}
 
 .categories{
+  margin-top: -2vw;
   display: flex;
   flex-wrap: wrap;
 }
@@ -115,6 +128,7 @@ button{
 
 
 .savings{
+  min-width: 25vw;
   max-width: 30vw;
   display: inline-flex;
   background-color: rgb(249, 249, 249);
@@ -122,13 +136,14 @@ button{
   padding-top: 1vw;
   flex-direction: column;
   box-shadow: 7px 6px 6px 1px rgba(153,153,153,1);
-
 }
+
  .savings h2{
    background-color: rgb(34, 109, 49);
  }
 
 .smokes{
+  min-width: 25vw;
   max-width: 30vw;
   display: inline-flex;
   background-color: rgb(249, 249, 249);
@@ -145,6 +160,7 @@ button{
 }
 
 .scrounges{
+  min-width: 25vw;
   max-width: 30vw;
   display: inline-flex;
   background-color: rgb(249, 249, 249);
@@ -163,17 +179,21 @@ button{
 .money{
   display: inline-flex;
   justify-content: space-between;
-  width: 50vw;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
+  /* align-self: center; */
+  min-width: 30vw;
+  max-width: 50vw;
+  margin-left: 22vw;
+  /* margin-right: 4vw; */
 }
 
 .left{
-  text-align: left;
+  margin-top: -3vw;
+  padding: 3vw;
 }
 
 .right{
-  text-align: left;
+  margin-top: -3vw;
+  padding: 3vw;
 
 }
 
@@ -187,31 +207,20 @@ button{
   flex-wrap: wrap;
 }
 
-.green{
-  margin: 0;
-  padding: 0;
-}
 
-.orange{
-  margin: 0;
-  padding: 0;
-}
 
-.red{
-  margin: 0;
-  padding: 0;
-}
-
-.savedimg{
-  padding: 1vw;
+.savedimg {
+  padding: 1vw;\
+  justify-content: space-around;
 
 }
 
 .smallSaved{
   max-height: 5vh;
-  margin: 0;
-  padding: 0;
-  z-index: 50;
+margin: 0;
+padding: 0;
+z-index: 50;
+
 }
 
 .smallSmoked{
@@ -219,6 +228,7 @@ button{
   margin: 0;
   padding: 0;
   z-index: 50;
+
 }
 
 .smallScrounged{
@@ -226,6 +236,7 @@ button{
   margin: 0;
   padding: 0;
   z-index: 50;
+
 }
 
 /* MODULES */
